@@ -35,7 +35,11 @@ logo.on('mouseenter',function () {
     }
 },500);*/
 
-
+$(".contact_button").on("click",function () {
+   var html = document.documentElement;
+   $(html).css({"overflow":"hidden"});
+   $(".form_wrapper").css({"height":"100vh","display":"block","width":"100%","z-index":1000})
+});
 $('.tabs_container>ul>li').hover(function () {
     $(this)
         .addClass("active_tab-link")
@@ -46,6 +50,9 @@ $('.tabs_container>ul>li').hover(function () {
         .removeClass("active_tab-content")
         .eq($(this).index())
         .addClass("active_tab-content");
+});
+$('.min').hover(function () {
+   $('.top').toggleClass("disable_contact");
 });
 
 (function () {
@@ -81,6 +88,8 @@ var scrollDownPosition = $('.scrollDown').offset().top;
 var largeTextPosition = $(".large-block_wrapper").offset().top;
 var aboutH2osition = $(".about_h2").offset().top;
 var servicesSecPos = $(".services_section").offset().top;
+var casesSecPos = $(".cases_section").offset().top;
+var casesH2Position = $(".cases_h2").offset().top;
 let marginTop = 80;
 
 function scrolls (progress) {
@@ -126,6 +135,12 @@ function scrolls (progress) {
         let opacity  = 1 - (YOffset/aboutH2osition)*0.85;
         TweenMax.to(".about_text",0.1,{opacity:opacity});
     }
+    if (progress>=casesSecPos){
+        TweenMax.to(".about_text",0.1,{display: "none"});
+    }
+    if (progress<=casesSecPos){
+        TweenMax.to(".about_text",0.1,{display: "block"});
+    }
     if (progress < aboutH2osition) {
         TweenMax.to(".about_text",1,{opacity:0.8});
     }
@@ -133,18 +148,20 @@ function scrolls (progress) {
         $(".about_h2").removeClass('line');
         TweenMax.to(".about_text",0,{position:"absolute",top:"5%",left:"0"});
     }
+    if (progress>=casesSecPos*0.7){
+        let op = (progress/scrollDownPosition)*0.3;
+        TweenMax.to(".cases_section",0.5,{opacity:op,delay:0.1});
+    }
+    if (progress>=casesSecPos*0.85){
+        TweenMax.to(".cases_container",0.8,{y:"0vh",ease:Power2.easeOut});
+    }
+    /*if (progress>=casesH2Position){
+        $(".cases_h2").addClass('line');
+
+        TweenMax.to
+    } */
     if (progress>=servicesSecPos*0.8){
         TweenMax.to(".services_section",0.8,{y:"0vh",ease:Power2.easeOut});
     }
-
-    /*if (progress >= aboutH2osition ){
-
-    }*/
-    /*if (progress<$(".large-block_wrapper").offset().top*0.9){
-        TweenMax.to($(".about_text"),0.2,{opacity:1});
-
-    }*/
-    /*box-shadow: 0 0 41px 0 #0f0f0f;*/
-
 
 }

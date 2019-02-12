@@ -63,11 +63,10 @@
         </section>
 
         <section class="cases_section section_container">
-            <h2 class="about_h2">Проекты</h2>
+            <h2 class="cases_h2">Проекты</h2>
             <div class="cases_container">
-
-                <div class="case_wrapper"><strong>develop, design & ui/ux</strong><span>CRM System</span><img src="static/caseimage.png" alt=""></div>
-                <div class="case_wrapper"><strong>develop, design</strong><span>Техические решения</span><img src="static/caseimage.png" alt=""></div>
+                <div class="case_wrapper"><strong>develop, design & ui/ux</strong><span>CRM System</span><!--<img src="static/caseimage.png" alt="">--></div>
+                <div class="case_wrapper"><strong>develop, design</strong><span>Техические решения</span><!--<img src="static/caseimage.png" alt="">--></div>
             </div>
         </section>
 
@@ -117,12 +116,40 @@
     </main>
 
     <footer>
-        <div class="section_container">
-            <div class="contact_button"></div>
+        <div class="section_container footer_section">
+            <div class="contacts">
+                <div class="tp"><a class="top">teiwaz@contact.company</a></div>
+                <div class="md"><a class="min">@teiwazlanding_bot</a></div>
+                <div class="bm"><a class="min">+7 (999) 999-99-99</a></div>
+            </div>
+            <div class="contact_button contact_button_before"><span>ОСТАВИТЬ ЗАЯВКУ</span></div>
+        </div>
+        <div class="form_wrapper">
+            <div class="contact_form">
+                <form method="post">
+                    <div class="form_group input_left">
+                        <span>
+                            <input type="text" name="name" size="40" aria-invalid="false" placeholder="NAME">
+                            <span class="focus_area"></span>
+                        </span>
+                    </div>
+                    <div class="form_group input_right">
+                        <span>
+                            <input type="text" name="contact" placeholder="PHONE/E-MAIL" required>
+                            <span class="focus_area"></span>
+                        </span>
+                    </div>
+                    <div class="form_group input_bottom">
+                        <span>
+                            <textarea type="text" name="message" placeholder="MESSAGE" cols="40" rows="10" aria-invalid="false" aria-required="true"
+                            style="overflow: hidden; overflow-wrap: break-word; height: 45px;"></textarea>
+                            <span class="focus_area"></span>
+                        </span>
+                    </div>
+                </form>
+            </div>
         </div>
     </footer>
-
-
 
 
 <script src="js/jquery.min.js"></script>
