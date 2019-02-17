@@ -17,7 +17,7 @@
                     <p style="float: left" id="active-text">sites</p>
                 </div>
                 <div class="scrollDown">
-                    <a href="#">
+                    <a href="#about">
                         <span class="anim-line"></span>
                         <span class="desktop"><strong>SCROLL TO DISCOVER</strong></span>
                     </a>
@@ -32,23 +32,32 @@
                     </ul>
                 </div>
                 <div class="side-menu-links_wrapper">
-                    <div class="side-menu-item"><a href="#"><span></span>ПРОЕКТЫ</a></div>
-                    <div class="side-menu-item"><a href="#"><span></span>СВЯЗАТЬСЯ</a></div>
+                    <div class="side-menu-item"><a href="#projects"><span></span>ПРОЕКТЫ</a></div>
+                    <div class="side-menu-item call"><a href="#"><span></span>СВЯЗАТЬСЯ</a></div>
                 </div>
             </div>
             <div class="active_side-menu">
                 <ul class="navigation">
-                    <li class="navigation_link"><span class="number">01</span>_About</li>
-                    <li class="navigation_link"><span class="number">02</span>_Cases</li>
-                    <li class="navigation_link"><span class="number">03</span>_Contact Us</li>
+                    <li class="navigation_link"><a href="#about"><span class="number">01</span>_About</a></li>
+                    <li class="navigation_link"><a href="#projects"><span class="number">02</span>_Cases</a></li>
+                    <li class="navigation_link"><a href="#footer"><span class="number">03</span>_Contact Us</a></li>
                 </ul>
             </div>
+
+            <!--<div class="window_wrapper">
+                <div class="console_toolbar">
+                    <h1>Заказать сайт, рекламу или приложение</h1>
+                </div>
+                <div class="console_body_container">
+                    &#126 textextext
+                </div>
+            </div>-->
         </div>
 
     </header>
 
     <main>
-        <section class="about_us_section section_container">
+        <section id="about" class="about_us_section section_container">
             <div class="about_content_container">
                 <h2 class="about_h2">About us</h2>
                 <div class="about-text_content">
@@ -62,16 +71,47 @@
             </div>
         </section>
 
-        <section class="cases_section section_container">
-            <h2 class="cases_h2">Проекты</h2>
+        <section id="projects" class="cases_section section_container">
+            <h2  class="cases_h2">Проекты</h2>
             <div class="cases_container">
-                <div class="case_wrapper"><strong>develop, design & ui/ux</strong><span>CRM System</span><!--<img src="static/caseimage.png" alt="">--></div>
-                <div class="case_wrapper"><strong>develop, design</strong><span>Техические решения</span><!--<img src="static/caseimage.png" alt="">--></div>
+                <div id="case1" class="case_wrapper"><strong>develop, design & ui/ux</strong><span>CRM System</span><!--<img src="static/caseimage.png" alt="">--></div>
+                <div id="case2" class="case_wrapper"><strong>develop, design</strong><span>Техические решения</span><!--<img src="static/caseimage.png" alt="">--></div>
+            </div>
+            <div id="full_case1" class="full_case_wrapper form_wrapper">
+                <div id="close_case1" class="close_btn">
+                    <ul class="close_x">
+                        <li class="left"></li>
+                        <li class="right"></li>
+                    </ul>
+                </div>
+                <div class="full_case_content">
+                    <h4>РАЗРАБОТКА CRM</h4>
+                    <div class="case_descr_wrapper">
+                        <div id="visual1" class="visual"></div>
+                        <div class="about_case_text">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad asperiores aut cupiditate, dolorem et excepturi fugiat illum impedit iste itaque nemo neque numquam placeat, qui quia recusandae sint, totam veniam.
+                        </div>
+                    </div>
+                </div>
+                <div class="case_toolbar">
+                    <div class="toolbar_icons_wrapper">
+                        <div class="favourite"><img src="static/favourite.png"><span class="counter">200</span></div>
+                        <div class="favourite"><img src="static/favourite.png"><span class="counter">200</span></div>
+                        <div class="favourite"><img src="static/favourite.png"><span class="counter">200</span></div>
+                    </div>
+                </div>
+            </div>
+            <div id="full_case2" class="full_case_wrapper form_wrapper">
+                <div id="close_case2" class="close_btn">
+                    <ul class="close_x">
+                        <li class="left"></li>
+                        <li class="right"></li>
+                    </ul>
+                </div>
             </div>
         </section>
 
         <section class="services_section section_container">
-
                 <div class="tabs_content_container active_tab-content">
                     <div class="tab_icon"></div>
                     <h3>Приложения</h3>
@@ -116,45 +156,66 @@
     </main>
 
     <footer>
-        <div class="section_container footer_section">
+        <div id="footer" class="section_container footer_section">
             <div class="contacts">
                 <div class="tp"><a class="top">teiwaz@contact.company</a></div>
                 <div class="md"><a class="min">@teiwazlanding_bot</a></div>
                 <div class="bm"><a class="min">+7 (999) 999-99-99</a></div>
             </div>
-            <div class="contact_button contact_button_before"><span>ОСТАВИТЬ ЗАЯВКУ</span></div>
+            <div class="contact_buttons_container">
+                <div class="contact_button contact_button_before"><span>ОСТАВИТЬ ЗАЯВКУ</span></div>
+                <div class="breef_button contact_button contact_button_before"><span>СОСТАВИТЬ БРИФ</span></div>
+            </div>
         </div>
-        <div class="form_wrapper">
+        <div id="form" class="form_wrapper">
             <div class="contact_form">
-                <form method="post">
-                    <div class="form_group input_left">
-                        <span>
-                            <input type="text" name="name" size="40" aria-invalid="false" placeholder="NAME">
-                            <span class="focus_area"></span>
+                <form class="form" method="post">
+                    <div class="inline_group">
+                        <div class="form_group input_left">
+                        <span class="input">
+                            <input class="inp" type="text" name="name" id="name" size="40" aria-invalid="false" placeholder="" required>
+                            <span class="focus_area">
+                                NAME
+                            </span>
                         </span>
-                    </div>
-                    <div class="form_group input_right">
-                        <span>
-                            <input type="text" name="contact" placeholder="PHONE/E-MAIL" required>
-                            <span class="focus_area"></span>
+                        </div>
+                        <div class="form_group input_right">
+                        <span class="input">
+                            <input class="inp" type="text" name="contact" id="contact" placeholder="" size="40" required>
+                            <span class="focus_area">
+                                PHONE/E-MAIL
+                            </span>
                         </span>
+                        </div>
                     </div>
                     <div class="form_group input_bottom">
-                        <span>
-                            <textarea type="text" name="message" placeholder="MESSAGE" cols="40" rows="10" aria-invalid="false" aria-required="true"
+                        <span class="input">
+                            <textarea class="inp" name="message" id="message" placeholder="" cols="40" aria-invalid="false" aria-required="true"
                             style="overflow: hidden; overflow-wrap: break-word; height: 45px;"></textarea>
-                            <span class="focus_area"></span>
+                            <span class="focus_area textarea_focus">
+                                MESSAGE
+                            </span>
                         </span>
+                    </div>
+                    <div class="submit_btn">
+                        <button type="submit">SEND</button>
                     </div>
                 </form>
             </div>
+            <div id="close_form" class="close_btn">
+                <ul class="close_x">
+                    <li class="left"></li>
+                    <li class="right"></li>
+                </ul>
+            </div>
+        </div>
+        <div class="foot_wrapper">
+            <div class="copyright">&copy;2019 TEIWAZ</div>
+            <div></div>
         </div>
     </footer>
 
-
 <script src="js/jquery.min.js"></script>
-<script src="js/jquery.fancybox.min.js"></script>
-<script src="js/jquery.smoothscroll.min.js"></script>
 <script src="js/TweenMax.min.js"></script>
 <script src="js/main.js"></script>
 </body>

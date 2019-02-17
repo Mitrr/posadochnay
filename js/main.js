@@ -18,28 +18,113 @@ $(window).on('load',function () {
 });
 
 logo.on('mouseenter',function () {
-    var l =  hiddenText.css("width");
+    showLogoText();
+}).on('mouseleave',function () {
+    hideLogoText();
+});
+
+function showLogoText(){
+    let l =  hiddenText.css("width");
     let x = parseInt(l)+3;
     TweenMax.to(logo,0.4,{opacity:1});
     TweenMax.to(hiddenText,0,{display: "inline"});
     TweenMax.to(activeText,1,{x:x,ease:Back.easeOut});
     TweenMax.to(hiddenText,0.2,{opacity: "0.8"});
-}).on('mouseleave',function () {
+}
+function hideLogoText(){
     TweenMax.to(activeText,1,{x:0,ease:Power3.easeIn,delay: 0.2});
     TweenMax.to(hiddenText,0.2,{opacity: 0});
-});
+}
 
-/*setInterval(function () {
-    for (var i=0;i<5;i++){
 
+var start = Date.now();
+
+setInterval(function () {
+    var timePassed = Date.now() - start;
+    /*var textTimer = setInterval();*/
+    if (timePassed >= 1000 && timePassed < 2000 && window.pageYOffset<aboutPosition){
+        showLogoText();
+        return;
     }
-},500);*/
+    if (timePassed >= 2000 && window.pageYOffset<aboutPosition){
+        hideLogoText();
+        start = Date.now();
+        return;
+    }
+    showLogoText();
+},2000);
 
-$(".contact_button").on("click",function () {
-   var html = document.documentElement;
-   $(html).css({"overflow":"hidden"});
-   $(".form_wrapper").css({"height":"100vh","display":"block","width":"100%","z-index":1000})
+
+$(".case_wrapper").on("click",function () {
+    let id;
+    if ($(this).attr('id') === "case1"){
+        id = "#full_case1";
+    } else {id = "#full_case2";}
+    openForm(id);
 });
+
+
+let html = document.documentElement;
+$(".call,.contact_button").on("click",function () {
+    let id = "#form";
+    openForm(id);
+});
+/*$(".contact_button").on("click",function () {
+    let id = "#form";
+   openForm(id);
+});*/
+function openForm(id){
+    $(html).css({"overflow":"hidden"});
+    $(id).css({"height":"100vh","display":"block","width":"100%","z-index":1000})
+}
+
+$(".close_btn").on("click",function () {
+    let btnID = $(this).attr('id');
+    let parentElID = '#'+document.querySelector(`#${btnID}`).parentElement.id;
+
+    $(html).css({"overflow":"auto"});
+    $(parentElID).css({"height":"0","display":"none","width":"0","z-index":0});
+});
+
+let nameNotEmpty = false;
+let contactNotEmpry = false;
+$("#form").on("click",function (e) {
+    let inputs = $(".input>.inp");
+
+    for (var i = 0; i<inputs.length; i++){
+        var id = inputs[i].name;
+        if (inputs[i].value !== ""){
+            $("#"+id).addClass("not_empty");
+            if (i === 0){
+                nameNotEmpty = true;
+            } else if (i === 1){
+                contactNotEmpry = true;
+            }
+        } else {
+            if (i === 0){
+                nameNotEmpty = false;
+            } else if (i === 1){
+                contactNotEmpry = false;
+            }
+            $("#"+id).removeClass("not_empty");
+        }
+    }
+    if (nameNotEmpty && contactNotEmpry) $(".submit_btn>button").css({"color": "#1C1D1E"});
+    else $(".submit_btn>button").css({"color": "rgba(28, 29, 30, 0.67)"});
+});
+
+$(".toolbar_icons_wrapper div").on('click',function () {
+    let elem = $(this)[0].childNodes[1];
+    let count = parseInt($(this)[0].childNodes[1].innerHTML);
+    count++;
+    elem.innerHTML = count;
+
+    console.log(count);
+
+    console.log($(this)[0].childNodes[1].innerHTML);
+    console.log($(this))
+});
+
 $('.tabs_container>ul>li').hover(function () {
     $(this)
         .addClass("active_tab-link")
@@ -66,10 +151,8 @@ $('.min').hover(function () {
         var scrollTopValue = function(){
             return (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
         };
-
         window.addEventListener("scroll", function(){
             var scroll = scrollTopValue();
-
             /*var progress = (scroll / (documentHeight - viewportHeight))*100;*/
             var progress = scroll;
 
@@ -102,7 +185,6 @@ function scrolls (progress) {
         TweenMax.to(logo,0,{y:progress,opacity:opacity,delay:0});
     }
     if (progress>scrollDownPosition*0.2 && progress<=aboutPosition){
-        console.log(YOffset);
         let opacity = 0.8 - (YOffset/scrollDownPosition)*1.1;
         if(marginTop > 105){
             marginTop = 80;
