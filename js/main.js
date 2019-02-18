@@ -61,6 +61,7 @@ $(".case_wrapper").on("click",function () {
         id = "#full_case1";
     } else {id = "#full_case2";}
     openForm(id);
+    $(".cases_section").css({"opacity":1});
 });
 
 
@@ -230,10 +231,10 @@ function scrolls (progress) {
         $(".about_h2").removeClass('line');
         TweenMax.to(".about_text",0,{position:"absolute",top:"5%",left:"0"});
     }
-    if (progress>=casesSecPos*0.7){
+    /*if (progress>=casesSecPos*0.7){
         let op = (progress/scrollDownPosition)*0.3;
         TweenMax.to(".cases_section",0.5,{opacity:op,delay:0.1});
-    }
+    }*/
     if (progress>=casesSecPos*0.85){
         TweenMax.to(".cases_container",0.8,{y:"0vh",ease:Power2.easeOut});
     }
