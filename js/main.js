@@ -1,4 +1,3 @@
-
 $('.menu').on('click',function (e) {
         e.preventDefault();
         $('.active_side-menu').slideToggle('slow');

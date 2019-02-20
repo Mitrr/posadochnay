@@ -932,12 +932,8 @@ textarea.not_empty ~ .focus_area, textarea:focus ~ .focus_area{
     }
 }
 @media (max-width: 768px) {
-    .contacts div {
-        font-size: 50px;
-    }
-    .contacts div:first-child {
-        font-size: 50px;
-    }
+    .contacts div {font-size: 50px;}
+    .contacts div:first-child {font-size: 50px;}
     .inline_group{
         flex-direction: column;
     }
