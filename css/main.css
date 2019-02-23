@@ -346,6 +346,16 @@ h3{
     h2{font-size: 40px;}
     h3{font-size: 30px}
 }
+@media (max-width: 320px){
+    .active_side-menu {width: 48%;}
+    .anim-line {bottom: 5vh;}
+    .desktop {
+        padding-right: 3%;
+        font-size: 11px;
+    }
+    .side-menu-links_wrapper{top:50%;}
+    .side-menu-item a {font-size: 10px;}
+}
 /*------------------------------------------------------main content-start------------------------------------------------*/
 main{
     height: 100%;
@@ -434,8 +444,13 @@ main{
     }
 }
 @media(max-width: 425px){
-    .about_text{font-size: 20px;}
+    .about_text{font-size: 20px;width: 100%;}
     .large-block_wrapper{font-size: 37px;}
+}
+@media(max-width: 320px){
+    .about_text{font-size: 17px;}
+    .large-block_wrapper {font-size: 30px;}
+
 }
 /*------------------------------------------------------cases start*--------------------------------------------------*/
 .cases_section{
@@ -719,6 +734,12 @@ main{
         line-height: 1.8;
         width: 100%;
     }
+}
+@media(max-width: 320px){
+    .services_tab{font-size: 10px;}
+    .active_tab-link {font-size: 12px;}
+    .services_tab span {left: -20%;}
+    .tabs_content_container>h3 {padding-top: 5%;line-height: 1;}
 }
 
 /*------------------------------------------------------services end*-------------------------------------------------*/
@@ -1009,3 +1030,13 @@ textarea.not_empty ~ .focus_area, textarea:focus ~ .focus_area{
     }
     .close_btn{top: 5%;}
 }
+@media (max-width: 320px){
+    .contacts div {font-size: 20px;}
+    .contacts div:first-child {font-size: 20px;}
+    .contact_button {font-size: 13px;}
+    .copyright {
+        margin-top: 40%;
+        font-size: 15px;
+    }
+}
+
