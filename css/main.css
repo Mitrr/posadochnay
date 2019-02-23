@@ -331,6 +331,21 @@ h3{
         font-size: 47px;
     }
 }
+@media (max-width: 425px) {
+    .side-menu{width: 30%;}
+    .active_side-menu{width: 40%;}
+    .navigation{padding-left: 5%;}
+    .navigation_link{font-size: 19px;}
+    .navigation_link span {
+        font-size: 13px;
+        padding-right: 5%;
+    }
+    .side-menu-item a{font-size: 12px;}
+    .anim-line{bottom: 8vh;}
+    .desktop{padding-left: 0;}
+    h2{font-size: 40px;}
+    h3{font-size: 30px}
+}
 /*------------------------------------------------------main content-start------------------------------------------------*/
 main{
     height: 100%;
@@ -417,6 +432,10 @@ main{
     .large-block_wrapper {
         margin-top: 60vh;
     }
+}
+@media(max-width: 425px){
+    .about_text{font-size: 20px;}
+    .large-block_wrapper{font-size: 37px;}
 }
 /*------------------------------------------------------cases start*--------------------------------------------------*/
 .cases_section{
@@ -562,6 +581,7 @@ main{
         text-align: right;
     }
 }
+
 /*------------------------------------------------------cases end*---------------------------------------------------*/
 
 /*------------------------------------------------------services start*-----------------------------------------------*/
@@ -667,6 +687,38 @@ main{
     webkit-transform: scale(1.2);
     transform: scale(1.2);
     transition: .3s;
+}
+@media (max-width: 425px) {
+    .services_section{
+        display: flex;
+        flex-direction: column-reverse;
+        flex-wrap: wrap;
+    }
+    .tabs_content_container, .tabs_container{
+        width: 100%;
+    }
+    .services_tabs{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .services_tab{
+        margin-right: 14%;
+        font-size: 13px;
+        padding-left: 0;
+    }
+    .active_tab-link{font-size: 14px;}
+    .services_tab span{
+        left: -22%;
+        width: 7px;
+        height: 7px;
+    }
+    .tabs_content_container>h3{padding-top: 5%}
+    .tabs_content_container>p{
+        font-size: 17px;
+        opacity: 0.4;
+        line-height: 1.8;
+        width: 100%;
+    }
 }
 
 /*------------------------------------------------------services end*-------------------------------------------------*/
@@ -945,4 +997,15 @@ textarea.not_empty ~ .focus_area, textarea:focus ~ .focus_area{
         margin: 25% auto 0;
         width: 75%;
     }
+}
+@media (max-width: 425px) {
+    .contacts div {font-size: 25px;}
+    .contacts div:first-child {font-size: 25px;}
+    .contact_button{margin: 0 auto 5%;}
+    .focus_area{font-size: 17px;}
+    .submit_btn>button{
+        font-size: 28px;
+        padding: 2% 8%;
+    }
+    .close_btn{top: 5%;}
 }
