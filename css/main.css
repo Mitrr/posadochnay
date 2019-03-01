@@ -1037,6 +1037,6 @@ textarea.not_empty ~ .focus_area, textarea:focus ~ .focus_area{
     .copyright {
         margin-top: 40%;
         font-size: 15px;
-    }
+    }z
 }
 
