@@ -1,14 +1,20 @@
 const express = require('express');
 const parser = require('body-parser');
+const path = require('path');
 
 const app = express();
 const urlencodedParser = parser.urlencoded({extended:false});
 
-app.use(urlencodedParser);
 app.use(parser.json());
+app.use(urlencodedParser);
+app.use('/js', express.static(path.join(__dirname, 'js')));
 
-app.post("/sendContacts", (req, res) => {
-    res.send("ebat");
+app.post("/contact", (req, res) => {
+    console.dir(req.body)
 });
 
-app.listen(3000);
+app.get("/contact", (req, res) => {
+   res.send("get");
+});
+
+app.listen(3000, () => console.log("server started"));

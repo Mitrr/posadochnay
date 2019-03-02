@@ -1,3 +1,48 @@
+/*sending forms*/
+/*document.getElementById("submit").addEventListener("click", function (e) {
+    e.preventDefault();
+
+    let registerForm = document.forms["sendContacts"];
+    let name = registerForm.elements["name"].value;
+    let contact = registerForm.elements["contact"].value;
+    let message = registerForm.elements["message"].value;
+
+    let client = JSON.stringify({name: name, contact: contact, message: message});
+    let request = new XMLHttpRequest();
+    // посылаем запрос на адрес "/user"
+    request.open("POST", "http://localhost:3001/send", true);
+    request.setRequestHeader("Content-Type", "application/json");
+    request.addEventListener("load", function () {
+
+        console.log(request.response);   // смотрим ответ сервера
+    });
+    request.send(client);
+});*/
+
+
+$('form').on('submit', function (e) {
+    e.preventDefault();
+    let form = $(this);
+    var frmdata = form.serialize();
+    console.log(frmdata);
+
+    $.ajax({
+        dataType: "json",
+        method:"post",
+        url: "/contact",
+        data: frmdata,
+        success : function(response)
+        {
+            if (response.code == "200"){
+                console.log("ok");
+                console.log(response);
+            }
+            else console.log("fuck///");
+        }
+    });
+});
+
+/*animations and functionality*/
 $('.menu').on('click',function (e) {
         e.preventDefault();
         $('.active_side-menu').slideToggle('slow');
@@ -34,7 +79,6 @@ function hideLogoText(){
     TweenMax.to(activeText,1,{x:0,ease:Power3.easeIn,delay: 0.2});
     TweenMax.to(hiddenText,0.2,{opacity: 0});
 }
-
 
 var start = Date.now();
 
