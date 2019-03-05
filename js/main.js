@@ -19,7 +19,6 @@
     request.send(client);
 });*/
 
-
 $('form').on('submit', function (e) {
     e.preventDefault();
     let form = $(this);
@@ -80,11 +79,11 @@ function hideLogoText(){
     TweenMax.to(hiddenText,0.2,{opacity: 0});
 }
 
-var start = Date.now();
+let start = Date.now();
 
 setInterval(function () {
     if (window.screen.width > 1024){
-        var timePassed = Date.now() - start;
+        let timePassed = Date.now() - start;
         /*var textTimer = setInterval();*/
         if (timePassed >= 1000 && timePassed < 2000 && window.pageYOffset<aboutPosition){
             showLogoText();

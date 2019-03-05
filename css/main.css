@@ -331,10 +331,7 @@ h3{
     .active_side-menu{width: 40%;}
     .navigation{padding-left: 5%;}
     .navigation_link{font-size: 19px;}
-    .navigation_link span {
-        font-size: 13px;
-        padding-right: 5%;
-    }
+    .navigation_link span {font-size: 13px;padding-right: 5%;}
     .side-menu-item a{font-size: 12px;}
     .anim-line{bottom: 8vh;}
     .desktop{padding-left: 0;font-size: 12px;}
@@ -344,10 +341,7 @@ h3{
 @media (max-width: 320px){
     .active_side-menu {width: 48%;}
     .anim-line {bottom: 5vh;}
-    .desktop {
-        padding-right: 3%;
-        font-size: 11px;
-    }
+    .desktop {padding-right: 3%;font-size: 11px;}
     .side-menu-links_wrapper{top:50%;}
     .side-menu-item a {font-size: 10px;}
 }
@@ -445,8 +439,6 @@ main{
 }
 /*------------------------------------------------------cases start*--------------------------------------------------*/
 .cases_section{
-    /*position: relative;
-    height: 60vh;*/
     opacity: 1;
 }
 .cases_container{
@@ -454,13 +446,8 @@ main{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin: 0 auto;
-    /*margin-top: 7%;*/
-    margin-top: 7%;
-    text-align: center;/*
-    position: absolute;
-    top: 90%;
-    width: 70%;*/
+    margin: 7% auto 0;
+    text-align: center;
 }
 .case_wrapper{
     position: relative;
@@ -473,8 +460,6 @@ main{
     cursor: pointer;
     transition: 0.6s ease-in-out;
     border-radius: 2px;
-    /*width: 598px;
-    height: 530px;*/
 }
 .case_wrapper:hover{
     background-size: 120% 120%;
@@ -545,7 +530,6 @@ main{
     width: 100%;
     height: 50px;
     background-color: #f44336;
-
 }
 .toolbar_icons_wrapper{
     display: flex;
@@ -638,17 +622,12 @@ main{
     opacity: 0;
 }
 @keyframes e {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
+    0% {opacity: 0;}
+    100% {opacity: 1;}
 }
 .tabs_container{
     width: 35%;
     text-align: left;
-    /*padding-top: 5%;*/
 }
 .services_tab{
     margin-bottom: 7%;
@@ -665,7 +644,6 @@ main{
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    /*background-color: #d8d8d8;*/
     border: 1.5px solid #f44336;
     opacity: .3;
     display: block;
@@ -730,7 +708,6 @@ main{
     .services_tab span {left: -20%;}
     .tabs_content_container>h3 {padding-top: 5%;line-height: 1;}
 }
-
 /*------------------------------------------------------services end*-------------------------------------------------*/
 
 
@@ -837,10 +814,6 @@ footer{
     color: #373433;
     height: 45px;
 }
-/*.form_group span{
-      pointer-events: auto;
-      position: static;
-  }*/
 .form_group textarea{
     background-color: transparent;
     outline: 0;
@@ -959,7 +932,6 @@ textarea.not_empty ~ .focus_area, textarea:focus ~ .focus_area{
     padding: 1% 5% 1% 5%;
 }
 .submit_btn>button:hover{
-    /*color: #1C1D1E;*/
     transition: .4s;
     background-color: #f44336;
 }
@@ -977,21 +949,11 @@ textarea.not_empty ~ .focus_area, textarea:focus ~ .focus_area{
     z-index: 100000;
 }
 @media(max-width: 1024px){
-    .contacts div:first-child {
-        font-size: 65px;
-    }
-    .contacts{
-        margin-top: 30%;
-    }
-    .contacts div {
-        margin-bottom: 12%;
-    }
-    .contact_buttons_container {
-        margin-top: 30%;
-    }
-    .copyright{
-        margin-top: 50%;
-    }
+    .contacts div:first-child {font-size: 65px;}
+    .contacts{margin-top: 30%;}
+    .contacts div {margin-bottom: 12%;}
+    .contact_buttons_container {margin-top: 30%;}
+    .copyright{margin-top: 50%;}
     .full_case_wrapper .close_btn {top: 5%;left: 4%;}
 }
 @media (max-width: 768px) {
@@ -1017,7 +979,6 @@ textarea.not_empty ~ .focus_area, textarea:focus ~ .focus_area{
     .about_case_text{width: 100%;font-size: 19px}
     .disable_contact{font-size: 23px;}
 }
-
 @media (max-width: 320px){
     .contacts div {font-size: 20px;}
     .contacts div:first-child {font-size: 20px;}
