@@ -337,7 +337,7 @@ h3{
     }
     .side-menu-item a{font-size: 12px;}
     .anim-line{bottom: 8vh;}
-    .desktop{padding-left: 0;}
+    .desktop{padding-left: 0;font-size: 12px;}
     h2{font-size: 40px;}
     h3{font-size: 30px}
 }
@@ -998,35 +998,26 @@ textarea.not_empty ~ .focus_area, textarea:focus ~ .focus_area{
     .contacts div {font-size: 50px;}
     .contacts div:first-child {font-size: 50px;}
     .inline_group{flex-direction: column;}
-    .form_group{
-        width: 100%;
-        margin-bottom: 15%;
-    }
-    .contact_form{
-        margin: 25% auto 0;
-        width: 75%;
-    }
+    .form_group{width: 100%;margin-bottom: 15%;}
+    .contact_form{margin: 25% auto 0;width: 75%;}
     .full_case_wrapper .close_btn {top: 1%;left: 3%;}
-    .full_case_content{
-        margin: 15% 5% 0;
-    }
+    .full_case_content{margin: 15% 5% 0;}
+    .disable_contact{font-size: 45px;}
 }
 @media (max-width: 425px) {
     .contacts div {font-size: 25px;}
     .contacts div:first-child {font-size: 25px;}
     .contact_button{margin: 0 auto 5%;}
     .focus_area{font-size: 17px;}
-    .submit_btn>button{
-        font-size: 28px;
-        padding: 2% 8%;
-    }
+    .submit_btn>button{font-size: 28px;padding: 2% 8%;}
     .close_btn{top: 5%;}
     .full_case_content h4 {font-size: 25px;padding-bottom: 5%;}
     .case_descr_wrapper{flex-direction: column}
     .visual{width: 100%;min-height: 350px;margin-bottom: 5%;}
     .about_case_text{width: 100%;font-size: 19px}
-
+    .disable_contact{font-size: 23px;}
 }
+
 @media (max-width: 320px){
     .contacts div {font-size: 20px;}
     .contacts div:first-child {font-size: 20px;}
@@ -1036,5 +1027,6 @@ textarea.not_empty ~ .focus_area, textarea:focus ~ .focus_area{
     .full_case_content h4{padding-bottom: 3%;font-size: 22px;}
     .full_case_wrapper .close_btn {top: 0;left: 2%;}
     .about_case_text{font-size: 17px;;line-height: 1.1;}
+    .disable_contact{font-size: 20px;}
 }
 

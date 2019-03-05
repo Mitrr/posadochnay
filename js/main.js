@@ -83,18 +83,20 @@ function hideLogoText(){
 var start = Date.now();
 
 setInterval(function () {
-    var timePassed = Date.now() - start;
-    /*var textTimer = setInterval();*/
-    if (timePassed >= 1000 && timePassed < 2000 && window.pageYOffset<aboutPosition){
+    if (window.screen.width > 1024){
+        var timePassed = Date.now() - start;
+        /*var textTimer = setInterval();*/
+        if (timePassed >= 1000 && timePassed < 2000 && window.pageYOffset<aboutPosition){
+            showLogoText();
+            return;
+        }
+        if (timePassed >= 2000 && window.pageYOffset<aboutPosition){
+            hideLogoText();
+            start = Date.now();
+            return;
+        }
         showLogoText();
-        return;
     }
-    if (timePassed >= 2000 && window.pageYOffset<aboutPosition){
-        hideLogoText();
-        start = Date.now();
-        return;
-    }
-    showLogoText();
 },2000);
 
 
