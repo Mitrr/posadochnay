@@ -71,12 +71,8 @@ h3{
     background: url('../bg.jpg') no-repeat center center/cover;
     transition: all 0.6s ease;
 }
-/*#active-text{
-    display: inline;
-}*/
+
 .logo{
-    /*display: flex;
-    justify-content: left;*/
     position: relative;
     font-family: Montserrat,sans-serif;
     color: white;
@@ -235,7 +231,6 @@ h3{
     font-weight: 500;
     text-decoration: none;
 }
-
 .side-menu-item a span{
     width: 2px;
     height: 55px;
@@ -391,7 +386,6 @@ main{
     line-height: 1.5;
     margin-top: 20%;
     margin-bottom: 40%;
-    /*transition: all 100ms ease;*/
 }
 .about_text p{
     transition: all 200ms ease;
@@ -420,11 +414,9 @@ main{
     font-size: 70px;
     font-weight: 600;
     left: 0;
-    /*height: 100%;*/
     line-height: 1;
     opacity: 0.9;
 }
-
 @media (max-width: 1440px ) {
     .large-block_wrapper {
         margin-top: 55vh;
@@ -450,7 +442,6 @@ main{
 @media(max-width: 320px){
     .about_text{font-size: 17px;}
     .large-block_wrapper {font-size: 30px;}
-
 }
 /*------------------------------------------------------cases start*--------------------------------------------------*/
 .cases_section{
@@ -592,9 +583,7 @@ main{
         margin-bottom: 10%;
         width: 97%;
     }
-    .active_tab-link{
-        text-align: right;
-    }
+    .active_tab-link{text-align: right;}
 }
 
 /*------------------------------------------------------cases end*---------------------------------------------------*/
@@ -1003,13 +992,12 @@ textarea.not_empty ~ .focus_area, textarea:focus ~ .focus_area{
     .copyright{
         margin-top: 50%;
     }
+    .full_case_wrapper .close_btn {top: 5%;left: 4%;}
 }
 @media (max-width: 768px) {
     .contacts div {font-size: 50px;}
     .contacts div:first-child {font-size: 50px;}
-    .inline_group{
-        flex-direction: column;
-    }
+    .inline_group{flex-direction: column;}
     .form_group{
         width: 100%;
         margin-bottom: 15%;
@@ -1017,6 +1005,10 @@ textarea.not_empty ~ .focus_area, textarea:focus ~ .focus_area{
     .contact_form{
         margin: 25% auto 0;
         width: 75%;
+    }
+    .full_case_wrapper .close_btn {top: 1%;left: 3%;}
+    .full_case_content{
+        margin: 15% 5% 0;
     }
 }
 @media (max-width: 425px) {
@@ -1029,14 +1021,20 @@ textarea.not_empty ~ .focus_area, textarea:focus ~ .focus_area{
         padding: 2% 8%;
     }
     .close_btn{top: 5%;}
+    .full_case_content h4 {font-size: 25px;padding-bottom: 5%;}
+    .case_descr_wrapper{flex-direction: column}
+    .visual{width: 100%;min-height: 350px;margin-bottom: 5%;}
+    .about_case_text{width: 100%;font-size: 19px}
+
 }
 @media (max-width: 320px){
     .contacts div {font-size: 20px;}
     .contacts div:first-child {font-size: 20px;}
     .contact_button {font-size: 13px;}
-    .copyright {
-        margin-top: 40%;
-        font-size: 15px;
-    }z
+    .copyright {margin-top: 40%;font-size: 15px;}
+    .visual{min-height: 200px;margin-bottom: 3%}
+    .full_case_content h4{padding-bottom: 3%;font-size: 22px;}
+    .full_case_wrapper .close_btn {top: 0;left: 2%;}
+    .about_case_text{font-size: 17px;;line-height: 1.1;}
 }
 
