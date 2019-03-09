@@ -789,6 +789,7 @@ footer{
 .contacts div a{
     cursor: pointer;
     transition: .7s ease-in-out;
+    color: #d8d8d8;
 }
 .contacts>div:hover{
     /*font-size: 70px;*/
